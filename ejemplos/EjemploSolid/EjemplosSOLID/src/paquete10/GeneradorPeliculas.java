@@ -5,6 +5,8 @@
  */
 package paquete10;
 
+import javax.swing.plaf.synth.SynthToggleButtonUI;
+
 public class GeneradorPeliculas {
     
     private APIMovie llave;
@@ -25,5 +27,10 @@ public class GeneradorPeliculas {
     public String obtenerUrl(){
         return url;
     }
-    
+
+    @Override
+    public String toString(){
+        String cadena = String.format("%s %s", obtenerLlave(),obtenerUrl());
+        return cadena;
+    }
 }

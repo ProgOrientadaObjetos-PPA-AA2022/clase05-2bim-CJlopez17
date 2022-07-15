@@ -6,18 +6,24 @@
 package paquete10;
 
 
+import java.awt.*;
+
 public class APINetflix implements APIMovie{
     
     private String apiKey;
     
     @Override
     public void establecerApiKey(String ak){
-        apiKey = ak+123123;
+        apiKey = String.format("%s%s",ak,"+123123");
     }
     
     @Override
     public String obtenerApiKey(){
         return apiKey;
     }
-    
+
+    @Override
+    public String toString(){
+        return "Netflix";
+    }
 }

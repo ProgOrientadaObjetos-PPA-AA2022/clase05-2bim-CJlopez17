@@ -12,12 +12,15 @@ public class APIAmazonMovie implements APIMovie{
     
     @Override
     public void establecerApiKey(String ak){
-        apiKey = ak+"909090";
+        apiKey = String.format("%s%s",ak,"909090");
     }
     
     @Override
     public String obtenerApiKey(){
         return apiKey;
     }
-    
+
+    public String toString(){
+        return "Amazon Prime";
+    }
 }
